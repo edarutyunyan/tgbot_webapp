@@ -14,7 +14,12 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "telegram-webapps-types": "^1.0.5"
+
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
   },
   "scripts": {
     "start": "react-scripts start",
