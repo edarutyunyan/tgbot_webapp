@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     tg.ready();
     toggleButton();
-  }, [])
+  }, [tg, toggleButton])
 
   return (
     <div className="App">
