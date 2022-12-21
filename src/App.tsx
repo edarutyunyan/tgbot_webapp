@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import {useTelegram} from "./hooks";
+import { useTelegram } from "./hooks";
 
 function App() {
-  const { tg, user, toggleButton } = useTelegram()
+  const { tg, user, toggleButton } = useTelegram();
 
   useEffect(() => {
     tg.ready();
@@ -11,8 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      {`Hello ${user?.first_name ?? 'stranger'}!`}
-      <button onClick={toggleButton}>Toggle button</button>
+      <div>{`Hello ${user.last_name ?? 'stranger'}!`}</div>
+      <div>{`${typeof tg.initData}`}</div>
+      <div><button onClick={toggleButton}>Toggle button</button></div>
     </div>
   );
 }
