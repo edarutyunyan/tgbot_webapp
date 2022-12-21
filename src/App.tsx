@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      {`Hello ${JSON.stringify(tg.initData) ?? 'stranger'}!`}
+      {`Hello ${user?.first_name ?? 'stranger'}!`}
       <button onClick={toggleButton}>Toggle button</button>
     </div>
   );
