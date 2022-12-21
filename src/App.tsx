@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div>{`Hello ${user?.last_name ?? 'stranger'}!`}</div>
-      <div>{`${typeof tg.initData}`}</div>
+      <div>{`${tg.initData}`}</div>
       <div><button onClick={toggleButton}>Toggle button</button></div>
     </div>
   );

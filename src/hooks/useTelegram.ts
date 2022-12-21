@@ -9,6 +9,6 @@ export const useTelegram = (): {tg: TelegramWebApps.WebApp, toggleButton: () => 
   return {
     tg,
     toggleButton,
-    user: JSON.parse(tg.initData)?.user,
+    user: tg.initData.user,
   }
 }
