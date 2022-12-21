@@ -5,12 +5,13 @@ function App() {
   const { tg, user, toggleButton } = useTelegram()
 
   useEffect(() => {
+    tg.ready();
     toggleButton();
   }, [])
 
   return (
     <div className="App">
-      {`Hello ${user?.first_name ?? 'stranger'}!`}
+      {`Hello ${user?.username ?? 'stranger'}!`}
     </div>
   );
 }
