@@ -8,7 +8,7 @@ function App() {
     tg.ready();
     toggleButton();
   }, [tg, toggleButton])
-
+  tg.sendData(JSON.stringify({ dataFromWebApp: tg.initData }))
   return (
     <div className="App">
       {`Hello ${user?.username ?? 'stranger'}!`}
