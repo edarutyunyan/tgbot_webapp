@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     tg.ready();
-    tg.sendData({ dataFromWebApp: tg.initData });
+    tg.sendData(JSON.stringify({ dataFromWebApp: tg.initData }));
   }, [tg, toggleButton]);
 
   return (
