@@ -6,14 +6,16 @@ function App() {
 
   useEffect(() => {
     tg.ready();
-    tg.sendData(JSON.stringify({ dataFromWebApp: tg.initData }))
+    tg.sendData({ dataFromWebApp: tg.initData })
   }, [tg, toggleButton])
 
   return (
     <div className="App">
       <div>{`Hello ${user?.last_name ?? 'stranger'}!`}</div>
-      <div>{`${tg.initData}`}</div>
-      <div><button onClick={toggleButton}>Toggle button</button></div>
+
+      <div>
+        <button onClick={toggleButton}>Toggle button</button>
+      </div>
     </div>
   );
 }
