@@ -1,7 +1,8 @@
-import {TelegramWebApps} from "telegram-webapps-types";
+// import { TelegramWebApps } from "telegram-webapps-types";
+// ReturnType { tg: TelegramWebApps.WebApp, toggleButton: () => void, user: TelegramWebApps.WebAppUser }
 
 const tg = window.Telegram.WebApp;
-export const useTelegram = (): {tg: TelegramWebApps.WebApp, toggleButton: () => void, user: TelegramWebApps.WebAppUser} => {
+export const useTelegram = () => {
 
   const onClose = () => tg.close();
   const toggleButton = () => tg.MainButton.isVisible ? tg.MainButton.hide() : tg.MainButton.show();
