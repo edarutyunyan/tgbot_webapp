@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      {`Hello ${user?.username ?? 'stranger'}!`}
+      {`Hello ${JSON.stringify(tg.initData) ?? 'stranger'}!`}
     </div>
   );
 }
