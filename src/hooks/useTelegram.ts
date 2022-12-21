@@ -7,9 +7,14 @@ export const useTelegram = () => {
   const onClose = () => tg.close();
   const toggleButton = () => tg.MainButton.isVisible ? tg.MainButton.hide() : tg.MainButton.show();
 
+  const sendData = (data: unknown) => {
+    tg.sendData(JSON.stringify({ dataFromWebApp: data }))
+  };
+
   return {
     tg,
     toggleButton,
     user: tg?.initDataUnsafe?.user,
+    sendData,
   }
 }
