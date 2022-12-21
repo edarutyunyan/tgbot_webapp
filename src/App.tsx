@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
+import {useTelegram} from "./hooks";
 
 function App() {
+  const { tg, user, toggleButton } = useTelegram()
+
   useEffect(() => {
-    // console.log(window.Telegram.WebApp.initData);
-    console.log(Telegram.WebApp.initData);
-  })
+    toggleButton();
+  }, [])
 
   return (
     <div className="App">
-      Hello World!
+      {`Hello ${user?.first_name ?? 'stranger'}!`}
     </div>
   );
 }
