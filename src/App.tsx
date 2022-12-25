@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTelegram } from "./hooks";
 
-const BOT_SERVER_IP_ADDRESS = 'http://217.18.62.216:4000';
+const BOT_SERVER_IP_ADDRESS = 'http://217.18.62.216:4000/';
 
 function App() {
   const { tg, user, toggleButton, sendData } = useTelegram();
