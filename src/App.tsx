@@ -1,14 +1,21 @@
 import React, { useEffect } from 'react';
 import { useTelegram } from "./hooks";
 
+const BOT_SERVER_IP_ADDRESS = 'http//:217.18.62.216';
+
 function App() {
   const { tg, user, toggleButton, sendData } = useTelegram();
 
   useEffect(() => {
     tg.ready();
     toggleButton();
+    tg.MainButton.onClick(() => sendData({ message: 'Main button was clicked!' }));
   }, [tg, toggleButton]);
-  tg.MainButton.onClick(() => sendData({ message: 'Main button was clicked!' }))
+
+  useEffect(() => {
+    fetch(BOT_SERVER_IP_ADDRESS, {method: 'GET'}).then(res => console.log(res));
+  }, [])
+
   return (
     <div className="App">
       <div>{`Hello ${user?.last_name ?? 'stranger'}!`}</div>
